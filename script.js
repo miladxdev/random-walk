@@ -25,15 +25,15 @@ class Pixel {
   }
 
   update() {
-    this.opacity -= 0.001;
-    // this.hue++;
+    this.opacity -= 0.0005;
+    this.hue++;
   }
 }
 
 let pixels = [];
 
-let pixel_size = 5;
-let offset = 2;
+let pixel_size = 8;
+let offset = 0;
 
 let x = canvas.width / 2;
 let y = canvas.height / 2;
@@ -70,7 +70,6 @@ function render() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   createPixel();
-
 }
 
-let interval = setInterval(render, 100);
+let interval = setInterval(render, 1);
